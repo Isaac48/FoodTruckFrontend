@@ -4,9 +4,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## 1.- Instalar los node modules mediante el comando `npm install`
 
-## Development server
+## 2.- Development server  correr `ng serve` para levantar el servidor.  `http://localhost:4200/`. 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
