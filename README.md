@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.11.
 
-## 1.- Instalar los node modules mediante el comando npm `install`
+## 1.- Instalar los node modules mediante el comando `npm install`
 
 ## Development server
 
