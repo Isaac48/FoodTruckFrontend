@@ -1,0 +1,48 @@
+
+   <div class="row">
+    <div class="row col-md-12">
+        
+        <div class="col-md-3">
+            <h5>Selecciona la hora</h5>
+            <ngb-timepicker [(ngModel)]="time" [meridian]="meridian" (ngModelChange)="onChange()"></ngb-timepicker>
+   
+          
+            <button class="btn btn-sm btn-outline-{{meridian ? 'success' : 'danger'}}" (click)="toggleMeridian()">
+                Meridian - {{meridian ? "ON" : "OFF"}}
+            </button>
+            <br>
+            <hr/>
+           
+        </div>
+        <div class="col-md-4">
+            <h5>Selecciona el Día</h5>
+              <select [(ngModel)]="day" (ngModelChange)="onChange()"  class="form-control select">
+                <option selected [ngValue]="null" disabled>{{Selected}}</option> 
+                <option *ngFor="let days of daysOfTheWeek" [ngValue]="days.name">{{days.name}}</option>
+              </select>
+         
+              <button class="btn btn-success btn-lg btn-block" (click)="enviar()">
+                Aceptar
+            </button>
+        </div>
+       
+
+        <div class="col-md-5">
+            <h5>Food Trucks Abiertos</h5>
+            <br>
+            <table class="table table-bordered">
+                <thead class="thead-dark">
+                    <tr>
+                      <th scope="col">Nombre</th>
+                      <th scope="col">Dirección</th>
+                     
+                    </tr>
+                    </thead>
+                <tr *ngFor="let item of foodTruckService.listFoodTruck">
+                    <td>{{ item.name}}</td>
+                    <td>{{ item.location}}</td>
+                </tr>
+            </table>
+      </div>
+    </div>
+
